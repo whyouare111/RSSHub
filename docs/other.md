@@ -943,3 +943,29 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### はてな匿名ダイアリー - 人気記事アーカイブ
 
 <Route author="masakichi" example="/hatena/anonymous_diary/archive" path="/hatena/anonymous_diary/archive"/>
+
+## Loopss Social Message
+
+::: tip 提示
+
+Loopss 社交消息存储在以太坊区块链上，现已部署多个链，不同链上的合约地址不同，故需要
+
+:::
+
+获取Loopss DAPP上的
+
+| 以太坊主网络 | Kovan 测试网络 | 币安智能链 | xDAI | Truffle | 
+| ------      | ----------    | --------- | ---- | -------- | 
+| 1           | 42            | 56        | 100  | 1337     |
+
+### 收件箱
+
+<Route author="whyouare111" example="/loopss/42/sms/inbox/0x41c9bd2c83EaeD686021cD09763f070718f62C67/0" path="/loopss/:networkId/sms/inbox/:receiver/:channel" :paramsDesc="['网络ID','收件人地址','频道']" selfhost="1" />
+
+### 发件箱
+
+<Route author="whyouare111" example="/loopss/42/sms/outbox/0x41c9bd2c83EaeD686021cD09763f070718f62C67/0" path="/loopss/:networkId/sms/outbox/:sender/:channel" :paramsDesc="['网络ID','发件人地址','频道']" selfhost="1" />
+
+### 双人对话
+
+<Route author="whyouare111" example="/loopss/42/sms/direct/0x41c9bd2c83EaeD686021cD09763f070718f62C67/0x41c9bd2c83EaeD686021cD09763f070718f62C67/0" path="/loopss/:networkId/sms/direct/:sender/:receiver/:channel" :paramsDesc="['网络ID','发件人地址','收件人地址','频道']" selfhost="1" />
